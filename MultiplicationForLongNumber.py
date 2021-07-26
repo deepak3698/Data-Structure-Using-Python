@@ -7,13 +7,12 @@ carry=0
 carry2=0
 
 #Numnber's For multiplications
-num1='798'
+num1='76434982327424998482'
 num2='88'
 
 for i in num1[::-1]:
     for j in range(0,2):
         if j==0:
-            print(carry)
             if len(str(int(i)*int(num2[-1]) +carry) )>1:
                 a1.insert(0,(int(i)*int(num2[-1])+carry)%10)
                 carry=(int(i)*int(num2[-1])+carry)//10
@@ -71,6 +70,8 @@ if newCarry!=0:
         newArray.insert(0,(a2[0]+newCarry)//10)
     else:
         newArray.insert(0,a2[0]+newCarry)
+else:
+    newArray.insert(0,a2[0])
 
 print(newArray)
 
